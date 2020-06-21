@@ -1,10 +1,18 @@
 <!DOCTYPE html>
+
+{% extends 'store/main.html' %}
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Checkout</title>
 </head>
 <body>
-    <h3>This is the Cart Page</h3>
+
+    {% block content %}
+        <h3>This is the Cart Page</h3>
+    {% endblock content %}
+
 </body>
 </html>
