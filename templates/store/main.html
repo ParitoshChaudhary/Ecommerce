@@ -41,7 +41,7 @@
           </li>
         </ul>
         <div class="form-inline my-2 my-lg-0">
-            <a href="#" class="btn btn-warning">Login</a>
+            <a href="#" class="btn btn-warning">{{ request.user }}</a>
             <a href="{% url 'cart' %}">
                 <img id='cart-icon' src="{% static 'images/cart.png' %}">
             </a>
@@ -56,5 +56,10 @@
         {% endblock content %}
     </div>
 </body>
+
+{% csrf_token %}
+<script type="text/javascript" src="{% static 'js/cart.js' %}">
+      var user = '{{ request.user }}'
+</script>
 
 </html>
